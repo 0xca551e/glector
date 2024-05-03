@@ -1,16 +1,19 @@
 # glector
 
+2D vector math for Gleam!
+
 [![Package Version](https://img.shields.io/hexpm/v/glector)](https://hex.pm/packages/glector)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/glector/)
 
 ```sh
 gleam add glector
 ```
+
 ```gleam
-import glector
+import glector.{Vector2}
 
 pub fn main() {
-  // TODO: An example of the project in use
+  glector.dot(Vector2(-6.0, 8.0), Vector2(5.0, 12.0)) // -> 66.0
 }
 ```
 
