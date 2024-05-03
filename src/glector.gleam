@@ -66,6 +66,16 @@ pub fn length_sq(v: Vector2) {
   a *. a +. b *. b
 }
 
+/// Gets the linear interpolation between two vectors.
+/// ```gleam
+/// lerp(Vector2(10.0, 0.0), Vector2(0.0, -10.0), 0.5) // -> Vector2(5.0, -5.0)
+/// ```
+pub fn lerp(a: Vector2, b: Vector2, t: Float) {
+  let x = a.x +. t *. { b.x -. a.x }
+  let y = a.y +. t *. { b.y -. a.y }
+  Vector2(x: x, y: y)
+}
+
 /// Multiplies the x and y components of vectors `a` and `b`.
 /// ```gleam
 /// multiply(Vector2(1.0, 2.0), Vector2(3.0, 4.0)) // -> Vector2(3.0, 8.0)

@@ -61,6 +61,13 @@ pub fn vector_tests() {
         |> expect.to_equal(100.0)
       }),
     ]),
+    describe("lerping between 2 vectors", [
+      it("works", fn() {
+        Vector2(100.0, 0.0)
+        |> glector.lerp(Vector2(0.0, -100.0), 0.75)
+        |> expect.to_equal(Vector2(25.0, -75.0))
+      }),
+    ]),
     describe("multiplying vectors", [
       it("works", fn() {
         Vector2(12.0, 34.0)
