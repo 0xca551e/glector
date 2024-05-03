@@ -1,5 +1,5 @@
 name = "glector"
-version = "1.0.0"
+version = "1.1.0"
 
 description = "2D vectors for Gleam"
 licences = ["Apache-2.0"]
